@@ -24,28 +24,19 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # a simple page that says hello
-    @app.route('/hello')
+    # a simple page that says hola
+    @app.route('/hola')
     def hello():
-        return 'Hello, World!'
+        return 'Hola, mundo!'
     
-def create_app():
-    app = ...
-    # existing code omitted
 
     from . import db
     db.init_app(app)
 
-def create_app():
-    app = ...
-    # existing code omitted
 
     from . import auth
     app.register_blueprint(auth.bp)
 
-def create_app():
-    app = ...
-    # existing code omitted
 
     from . import blog
     app.register_blueprint(blog.bp)
